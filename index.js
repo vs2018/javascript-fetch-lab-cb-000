@@ -54,6 +54,12 @@ fetch(`${baseApi}repos/${fork}/issues`, {
 }).then(resp => getIssues())
 }
 
+function displayIssue(issue) {
+  $('#issues').append(issue.template())
+}
+
+
+
 function showResults(json) {
 }
 
